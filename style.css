@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+* {
+    font-family: 'Quicksand', sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+    transition: all .3s;
+}
+:root {
+    --maincolor: #04436E;
+    --maincolor2: #1F699B;
+}
+body {
+    background-image: url(images/bg.png);
+    background-repeat: repeat;
+}
+
+header{
+    display: flex;
+    background-color: var(--maincolor);
+    justify-content: center;
+    height: 32px;
+}
+#header1 h6{
+    margin: 16px 0;
+    color: white;
+}
+#header1{
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 16px;
+}
+#circles {
+    margin: 16px 0;
+    font-size: 0;
+}
+#dot1 {
+    background-color: #04436E;
+}
+#dot2{
+    background-color: #902094;
+}
+#dot3{
+    background-color: #1B1B1B;
+}
+#dot4{
+    background-color: #CABE11;
+}
+
+h1,h2,h3,h4{
+    color: var(--maincolor);
+}
+.dot {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin: 0 1px;
+    display: inline-block;
+    cursor: pointer;
+}
+.dot:hover{
+    opacity: 0.4;
+}
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: 1px solid black;
+    outline: none;
+    background-color: var(--maincolor2);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+  }
+  
+  #myBtn:hover {
+    background-color: #555;
+  }
+#header2, #text, #pakalpojumi, #atsauksmes{
+    display: flex;
+    justify-content: center;
+}
+#imgheader{
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 16px;
+}
+#header2 img{
+    height: 60px;
+    width: 150px;
+    margin: 16px 8px;
+}
+#header2 h1 {
+    font-size: 32px;
+    margin-left: 16px;
+    text-align: center;
+}
+.mySlides {
+    display: none;
+  }
+#imageinimage img{
+    width: 1200px;
+    height: 400px;
+    text-align: center;
+    margin: 0 16px;
+}
+#image {
+    background-color: rgb(223, 223, 223, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+}
+.imageinimage{
+    height: 100%;
+    max-width: 1200px;
+    display: none;
+    position: relative;
+}
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%);
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+}
+.prev{
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+#text-container {
+    width: 1200px;
+    padding: 0;
+    margin: 0;
+}
+#text h2{
+    text-align: center;
+    font-size: 19px;
+    margin: 32px 10px 16px; 
+}
+#text p{
+    text-align: center;
+    margin: 16px 5px 32px;
+    line-height: 29px;
+    font-size: 12px;
+}
+.textspan {
+    background-color: var(--maincolor);
+    border-radius: 10px;
+    font-size: 20px;
+    margin-left: 5px;
+    padding: 5px 8px;
+    color: white;
+}
+#pakalpojumi img {
+    width: 70px;
+    height: 70px;
+}
+#pakalpojumi #box-container{
+    width: 1200px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 16px 16px 16px;
+}
+#pakalpojumi .box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(244,244,244, 0.5);
+    border-radius: 16px;
+    width: 380px;
+    height: 120px;
+    padding: 8px 8px;
+    margin: 0px 8px 16px;
+}
+#pakalpojumi .boxtext{
+    width: 300px;
+    text-align: left;
+    margin-left: 16px;
+    height: 95%;
+}
+#pakalpojumi p{
+    width: 290px;
+    font-size: 11px;
+    margin-top: 16px;
+}
+
+#atsauksmes #box-container{
+    width: 1200px;
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 64px;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 16px;
+}
+
+#atsauksmes .box {
+    background-color: #eaeaea;
+    padding: 64px 20px 20px;
+    margin: 16px 8px;
+    border-radius: 8px;
+    width: 220px;
+    height: 150px;
+    position: relative;
+    text-align: center;
+}
+
+#atsauksmes img {
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+}
+
+h3 {
+    font-size: 22px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#atsauksmes p{
+    font-size: 12px;
+    color: #555;
+    margin: 0px 0px 8px;
+    width: 225px;
+    text-align: center;
+}
+
+#atsauksmes button {
+    padding: 10px 20px;
+    width: 90%;
+    background-color: #999999;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#atsauksmes button:hover {
+    background-color: #333;
+}
+#ievade {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(images/bg2.png);
+    background-color: var(--maincolor2);
+}
+#ievadediv{
+    margin: 32px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+#ievadediv h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: white;
+    font-weight: normal;
+    text-align: center;
+}
+
+#ievadediv p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.email-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    font-size: 16px;
+    width: 165px;
+}
+
+.email-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #F5F5F5;
+    color: var(--maincolor);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.email-form button:hover {
+    background-color: #838383;
+    color: #FFF;
+}
+
+footer {
+    background-color: var(--maincolor);
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+footer p{
+    padding: 16px 0;
+}
+
+@media(max-width:935px){
+    #atsauksmes .box{
+        margin-top: 36px;
+    }
+    #imageinimage img{
+        margin: 0;
+    }
+    #pakalpojumi #box-container{
+        align-items: center;
+        justify-content: center;
+    }
+    #pakalpojumi .box {
+        width: 360px;
+    }
+}
+@media(max-width:652px){
+    #ievade form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .email-form input {
+        margin-right: 0;
+    }
+    #header2 h1 {
+        font-size: 20px;
+    }
+   
+}
